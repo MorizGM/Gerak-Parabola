@@ -52,3 +52,8 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+function playAudio(){
+    var music = new Audio('assets/audio_jawaban_1.mp3');
+    music.play();
+}
