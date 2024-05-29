@@ -130,6 +130,7 @@
                     <div class="col-md-6 offset-md-3">
                         <p class="lead" style="text-align: justify;">Setelah menonton kedua video di atas, bisakah kamu menggambarkan bagaimana lintasan gerak benda yang terjadi? Gambarkan pada kotak dibawah ini.</p>
                         <canvas id="myCanvas" class="" width="400" height="400" style="border: 1px solid black;"></canvas>
+                        <button class="btn btn-primary btn-sm" id="deleteButton">Hapus</button>
                         <p class="lead mt-3" style="text-align: justify;">Apa saja besaran fisika yang terdapat pada gerak parabola? Bagaimana cara menentukan besaran tersebut dan apa saja yang mempengaruhinya? Tuliskan jawaban sementara menurut pendapat kalian.  </p>
                         <textarea class="form-control" row="15" cols="47"></textarea>
                     </div>
@@ -147,7 +148,17 @@
                     canvas.on('mouse:down', function() {
                         canvas.isDrawingMode = true;
                     });
-        
+                    
+                    canvas.on('touch:drag', function(){
+                        canvas.isDrawingMode = true;
+                    })
+                    var deleteButton = document.getElementById('deleteButton');
+
+                    deleteButton.addEventListener('click', function() {
+                        var object = canvas.item(canvas.getObjects().length-1);
+                        canvas.remove(object);
+                    });
+
                     // canvas.on('mouse:up', function() {
                     //     canvas.isDrawingMode = false;
                     // });
@@ -189,7 +200,55 @@
                             </li>
                             <li class="list-group-item lead border-0" style="text-align: justify;">
                                 Isilah hasil simulasimu ke tabel di bawah ini dan bandingkan hasil percobaanmu dengan hasil perhitungan secara manual menggunakan rumus.
-                                <img class="img-fluid mb-4" src="assets/img/portfolio/table.png" />
+                                <!-- <img class="img-fluid mb-4" src="assets/img/portfolio/table.png" /> -->
+                                <table class="table table-bordered text-center justify-content-center mx-auto" style="max-width: 10rem;text-align: center;">
+                                    <tr class="text-center bg-primary text-white">
+                                        <th></th>
+                                        <th>Percobaan 1</th>
+                                        <th>Percobaan 2</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center bg-primary text-white">Kecepatan awal (m/s)</th>
+                                        <td><input type="text" style="width: 4rem;"></td>
+                                        <td><input type="text" style="width: 4rem;"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center bg-primary text-white">Sudut (°)</th>
+                                        <td><input type="text" style="width: 4rem;"></td>
+                                        <td><input type="text" style="width: 4rem;"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center bg-primary text-white">Waktu (s)</th>
+                                        <td><input type="text" style="width: 4rem;"></td>
+                                        <td><input type="text" style="width: 4rem;"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center bg-primary text-white">Posisi Sumbu-X (Pengamatan)</th>
+                                        <td><input type="text" style="width: 4rem;"></td>
+                                        <td><input type="text" style="width: 4rem;"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center bg-primary text-white">Posisi Sumbu-Y (Pengamatan)</th>
+                                        <td><input type="text" style="width: 4rem;"></td>
+                                        <td><input type="text" style="width: 4rem;"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center bg-primary text-white">Posisi Sumbu-Y (Pengamatan)</th>
+                                        <td><input type="text" style="width: 4rem;"></td>
+                                        <td><input type="text" style="width: 4rem;"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center bg-primary text-white">Posisi Sumbu-X (Perhitungan)</th>
+                                        <td><input type="text" style="width: 4rem;"></td>
+                                        <td><input type="text" style="width: 4rem;"></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center bg-primary text-white">Posisi Sumbu-Y (Perhitungan)</th>
+                                        <td><input type="text" style="width: 4rem;"></td>
+                                        <td><input type="text" style="width: 4rem;"></td>
+                                    </tr>
+                                </table>
+                                
                             </li>
 
 
@@ -206,7 +265,48 @@
                         <p class="lead">Setelah melakukan percobaan sederhana menggunakan lab virtual, kalian akan mendapatkan hasil percobaan seperti contoh berikut ini.</p>
                         <img class="img-fluid mb-4" src="assets/img/portfolio/materi_7.png" />
                         <p class="lead" style="text-align: justify;">Dari gambar, dapat kita lihat bahwa gerak parabola memiliki ciri berupa lintasan geraknya yang berbentuk lengkungan.<br><br>Dari lintasan yang terbentuk, waktu dan posisi benda dapat diukur menggunakan alat ukur yang tersedia, kemudian kalian akan mendapatkan hasil seperti tabel berikut ini.</p>
-                        <img class="img-fluid mb-4" src="assets/img/portfolio/table_fiilled.png" />
+                        <table class="table table-bordered text-center justify-content-center mx-auto" style="max-width: 10rem;text-align: center;">
+                            <tr class="text-center bg-primary text-white">
+                                <th></th>
+                                <th>Percobaan 1</th>
+                                <th>Percobaan 2</th>
+                            </tr>
+                            <tr>
+                                <th class="text-center bg-primary text-white">Kecepatan awal (m/s)</th>
+                                <td>16</td>
+                                <td>16</td>
+                            </tr>
+                            <tr>
+                                <th class="text-center bg-primary text-white">Sudut (°)</th>
+                                <td>30</td>
+                                <td>37</td>
+                            </tr>
+                            <tr>
+                                <th class="text-center bg-primary text-white">Waktu (s)</th>
+                                <td>0.5</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <th class="text-center bg-primary text-white">Posisi Sumbu-X (Pengamatan)</th>
+                                <td>6.93 m</td>
+                                <td>12.78 m</td>
+                            </tr>
+                            <tr>
+                                <th class="text-center bg-primary text-white">Posisi Sumbu-Y (Pengamatan)</th>
+                                <td>2.75 m</td>
+                                <td>4.63 m</td>
+                            </tr>
+                            <tr>
+                                <th class="text-center bg-primary text-white">Posisi Sumbu-X (Perhitungan)</th>
+                                <td>6.93 m</td>
+                                <td>12.78 m</td>
+                            </tr>
+                            <tr>
+                                <th class="text-center bg-primary text-white">Posisi Sumbu-Y (Perhitungan)</th>
+                                <td>2.75 m</td>
+                                <td>4.63 m</td>
+                            </tr>
+                        </table>
                         <p class="lead" style="text-align: justify;">
                             Data menggunakan perhitungan menggunakan rumus untuk mencari posisi sumbu-x yaitu
                             $$x= v_0 \; cos \theta .t$$ dan posisi sumbu-y yaitu 
