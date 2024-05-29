@@ -15,6 +15,19 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/510/fabric.min.js"></script>
+        <script>
+            window.addEventListener('beforeunload', function (e) {
+            // Cancel the event
+            e.preventDefault(); // If you prevent default behavior in Mozilla Firefox prompt will always be shown
+            // Chrome requires returnValue to be set
+            e.returnValue = '';
+            });
+        </script>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -22,7 +35,7 @@
             <div class="container">
                 
                 <a class="navbar-brand" href="home.html">
-                    <img src="assets/img/portfolio/unj_logo-removebg-preview.png" width="50" alt="UNJ Logo"/>
+                    <img src="assets/img/portfolio/icon_nav.png" width="80" alt="UNJ Logo"/>
                     Gerak Parabola
                 </a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,32 +45,17 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="home.html">Home</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="materi.html">Kegiatan Materi</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#">Daftar Pustaka</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#">Lampiran</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="materi.html">Kegiatan 1</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="materi_2.html">Kegiatan 2</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="asesmen_sumatif.html">Asesmen Sumatif</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <!-- Masthead-->
-        <header class="masthead bg-primary text-white text-center">
-            <div class="container d-flex align-items-center flex-column">
-                <!-- Masthead Avatar Image-->
-                <!-- <img class="masthead-avatar mb-5" src="assets/img/portfolio/5365249.jpg" alt="..." /> -->
-                <!-- Masthead Heading-->
-                <h1 class="masthead-heading text-uppercase mb-0">Gerak Parabola</h1>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">Irsya Affiyani Darlestia</p>
-            </div>
-        </header>
+
         <!-- Materi Pertama Section-->
-        <section class="page-section mb-0" id="materiPertama">
+        <section class="page-section mb-0" id="materiPertama" style="padding-top: 10rem;">
             <div class="container">
                 <!-- About Section Heading-->
                 <h2 class="page-section-heading text-center text-uppercase">Kegiatan Pembelajaran 1</h2>
@@ -67,26 +65,166 @@
                     <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
+                <h3 class="text-center">PENGERTIAN DAN BESARAN PADA GERAK PARABOLA</h3>
+                <!-- <h4 class="text-center text-uppercase mb">Judul Sub Header</h4> -->
                 <!-- About Section Content-->
+                <!-- <div class="row">
+                    <div class="col-sm ms-auto">
+                        <p class="lead">Pasti kamu sudah tidak asing dengan benda-benda yang bergerak. Pada materi sebelumnya kita sudah mempelajari benda yang bergerak lurus secara beraturan (GLB) dan benda yang bergerak lurus berubah beraturan (GLBB). Pada materi ini, kita akan mempelajari gerak benda yang bergerak dan memiliki lintasan berupa parabola.</p>
+                        <p class="lead">Gerak parabola memiliki banyak penerapan dalam kehidupan sehari-hari, salah satunya yaitu penerapan di bidang olahraga seperti permainan bulu tangkis, bola voli, tenis meja, sepak bola, dan bola basket.</p>
+                    </div>
+                </div> -->
+                <div class="row mt-4">
+                    <div class="col-md-6 offset-md-3">
+                        <p class="lead" style="text-align: justify;">Pasti kamu sudah tidak asing dengan benda-benda yang bergerak. Pada materi sebelumnya kita sudah mempelajari benda yang bergerak lurus secara beraturan (GLB) dan benda yang bergerak lurus berubah beraturan (GLBB). Pada materi ini, kita akan mempelajari gerak benda yang bergerak dan memiliki lintasan berupa parabola.</p>
+                        <p class="lead" style="text-align: justify;">Gerak parabola memiliki banyak penerapan dalam kehidupan sehari-hari, salah satunya yaitu penerapan di bidang olahraga seperti permainan bulu tangkis, bola voli, tenis meja, sepak bola, dan bola basket.</p>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-lg-4 ms-auto "><img class="img-fluid" src="assets/img/portfolio/materi_1.png" alt="..." /></div>
-                    <div class="embed-responsive embed-responsive-16by9 me-auto col-lg-4">
-                        <div class="card  text-white bg-success" style="width: 28rem;">
-                            <iframe class="embed-responsive-item card-img-top"  style="width: 100%;height: 100vh;" src="https://www.youtube.com/embed/pHQQnD7vgTc?si=o252eOeN8OsvVoSU" title="YouTube video player" allowfullscreen></iframe>
-                            <div class="card-body">
-                                <p class="card-text">Dari video tersebut, lintasan yang terbentuk dari pelemparan bola basket ke dalam ring tidak berbentuk lurus, melainkan membentuk parabola. Hal tersebut terjadi karena adanya perpaduan antara gerak lurus beraturan (GLB) dan gerak lurus berubah beraturan (GLBB).</p>
-                            </div>
+                    <div class="embed-responsive embed-responsive-16by9 me-auto col-lg-3">
+                        <div class="card text-white bg-success" style="width: 100%;">
+                            <!-- <iframe class="embed-responsive-item card-img-top"  style="width: 100%;height: 100vh;" src="https://www.youtube.com/embed/pHQQnD7vgTc?si=o252eOeN8OsvVoSU" title="YouTube video player" allowfullscreen></iframe> -->
+                            <iframe class="embed-responsive-item card-img-top" width="400" height="315" src="https://www.youtube.com/embed/bNNzRyd1xz0?si=JSvvj_0oFyhl26wA" title="Angry Birds" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
-                <div class="mx-auto d-block text-center mt-4"><img class="img-responsive" src="assets/img/portfolio/materi_2.png" style="max-width: 100%;" alt="..." /></div>
                 <div class="row mt-4">
-                    <div class="col-sm ms-auto">
-                        <p class="lead">Gerak parabola merupakan gerak suatu objek di udara yang hanya dipengaruhi oleh gaya gravitasi. Dalam arti lain, pada gerak parabola ini gaya penyebab benda bergerak dan gaya gesekan udara diabaikan sehingga gerak benda ditinjau setelah benda diberi kecepatan awal dan bergerak bebas di udara hanya dengan pengaruh gaya gravitasi.</p>
-                        <p class="lead">Gerak parabola dapat dianalisis sebagai dua gerakan terpisah jika hambatan udara diabaikan. Pada gerak parabola, komponen gerak horizontal memiliki kecepatan tetap sedangkan komponen gerak vertikalnya memiliki percepatan tetap.</p>
-                        <p class="lead">Seperti nama geraknya, lintasan gerak parabola sudah pasti berbentuk parabola atau berupa lengkungan. Jika diuraikan, lintasan gerak parabola merupakan perpaduan antara gerak lurus beraturan pada sumbu-x dan gerak lurus berubah beraturan pada sumbu-y sehingga kecepatan benda pada sumbu-x selalu tetap dan percepatan gerak benda pada sumbu-y selalu tetap baik dipercepat maupun diperlambat.</p>
+                    <div class="col-md-6 offset-md-3">
+                        <p class="lead" style="text-align: justify;">Pada kegiatan pembelajaran 1 ini kita akan mempelajari pengertian, ciri-ciri, dan besaran-besaran yang terdapat pada gerak parabola.</p>
                     </div>
                 </div>
+                <div class="row">
+                    <span class="col-5 col-lg-3 offset-1 text-center border border-success h5 rounded-3 p-2 bg-info text-white mt-3">Stimulation</span>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <p class="lead" style="text-align: justify;">Pada permainan bola basket, pemain harus melambungkan bola ke arah ring untuk memasukkan bola. Pada permainan badminton, pemain harus saling mengoper kok ke arah lawan pada saat melakukan permainan. Pada permainan bola basket dan badminton tersebut terjadi penerapan gerak parabola.<br><br>Untuk lebih memahaminya, yuk simak kedua video berikut ini.</p>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6 offset-md-3 text-center embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" width="400" height="315" src="https://www.youtube.com/embed/pHQQnD7vgTc?si=fwawq7V_2kM7Mh1q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 offset-md-3 text-center embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" width="400" height="315" src="https://www.youtube.com/embed/oVZb9X54c3w?si=7rN-laJdykxM0Gzp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col-md-6 offset-md-3">
+                        <p class="lead" style="text-align: justify;">Apakah kalian memahami arti dari gerak parabola? Mengapa kita harus mempelajarinya?</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <span class="col-5 col-lg-3 offset-1 text-center border border-success h5 rounded-3 p-2 bg-info text-white mt-3">Problem Statement</span>
+                </div>
+                
+
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <p class="lead" style="text-align: justify;">Setelah menonton kedua video di atas, bisakah kamu menggambarkan bagaimana lintasan gerak benda yang terjadi? Gambarkan pada kotak dibawah ini.</p>
+                        <canvas id="myCanvas" class="" width="400" height="400" style="border: 1px solid black;"></canvas>
+                        <p class="lead mt-3" style="text-align: justify;">Apa saja besaran fisika yang terdapat pada gerak parabola? Bagaimana cara menentukan besaran tersebut dan apa saja yang mempengaruhinya? Tuliskan jawaban sementara menurut pendapat kalian.  </p>
+                        <textarea class="form-control" row="15" cols="47"></textarea>
+                    </div>
+                </div>
+                
+                <script>
+                    let canvas = new fabric.Canvas('myCanvas');
+
+                    canvas.isDrawingMode = true;
+        
+                    // Optional: Set brush options
+                    canvas.freeDrawingBrush.width = 5;
+                    canvas.freeDrawingBrush.color = '#000000';
+        
+                    canvas.on('mouse:down', function() {
+                        canvas.isDrawingMode = true;
+                    });
+        
+                    // canvas.on('mouse:up', function() {
+                    //     canvas.isDrawingMode = false;
+                    // });
+                </script>
+
+                <div class="row">
+                    <span class="col-5 col-lg-3 offset-1 text-center border border-success h5 rounded-3 p-2 bg-info text-white mt-3">Data Collection</span>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <p class="lead" style="text-align: justify;">Untuk mengetahui jawabannya, yuk lakukan percobaan sederhana menggunakan laboratorium virtual berikut ini.<br><br>Pada simulasi kali ini kita akan mengamati bagaimana lintasan yang terbentuk dari benda yang melakukan gerak parabola. Dan dari lintasan tersebut apa saja besaran yang terdapat pada gerak parabola. Untuk melakukannya, perhatikan dan ikuti langkah-langkah berikut ini secara berurutan.</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <ol class="list-group list-group-numbered border-0">
+                            <li class="list-group-item lead border-0">
+                                Klik pada <a href="https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_all.html?locale=in" target="_blank">tautan berikut ini!</a>
+                            </li>
+                            <li class="list-group-item lead border-0">
+                                Pilih pilihan <mark>Lab</mark> untuk memulai percobaan
+                            </li>
+                            <li class="list-group-item lead border-0" style="text-align: justify;">
+                                Perhatikan variabel yang tersedia, terdapat pilihan dengan hambatan udara dan tanpa hambatan udara. Pilih yang tanpa hambatan udara <mark>(tanpa ceklis <em>air resistance</em>)</mark>.
+                            </li>
+                            <li class="list-group-item lead border-0" style="text-align: justify;">
+                                Aturlah gravitasi menjadi 10 m/s<sup>2</sup>, atur besar kecepatan awal dan besar sudut yang terbentuk.
+                            </li>
+                            <li class="list-group-item lead border-0" style="text-align: justify;">
+                                Kemudian tembakkan benda tersebut (klik tombol <span style="color:red;">merah</span>) dan perhatikan apa yang terjadi.
+                            </li>
+                            <li class="list-group-item lead border-0" style="text-align: justify;">
+                                Lakukan kembali untuk kecepatan awal dan sudut elevasi yang berbeda.
+                            </li>
+                            <li class="list-group-item lead border-0" style="text-align: justify;">
+                                Gunakan alat ukur yang tersedia kemudian arahkan kepada titik-titik proyeksi pada lintasan benda yang ditembakkan untuk mengamati besar waktu dan posisi benda.
+                            </li>
+                            <li class="list-group-item lead border-0" style="text-align: justify;">
+                                Isilah hasil simulasimu ke tabel di bawah ini dan bandingkan hasil percobaanmu dengan hasil perhitungan secara manual menggunakan rumus.
+                                <img class="img-fluid mb-4" src="assets/img/portfolio/table.png" />
+                            </li>
+
+
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <span class="col-5 col-lg-3 offset-1 text-center border border-success h5 rounded-3 p-2 bg-info text-white mt-3">Data Processing</span>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <p class="lead">Setelah melakukan percobaan sederhana menggunakan lab virtual, kalian akan mendapatkan hasil percobaan seperti contoh berikut ini.</p>
+                        <img class="img-fluid mb-4" src="assets/img/portfolio/materi_7.png" />
+                        <p class="lead" style="text-align: justify;">Dari gambar, dapat kita lihat bahwa gerak parabola memiliki ciri berupa lintasan geraknya yang berbentuk lengkungan.<br><br>Dari lintasan yang terbentuk, waktu dan posisi benda dapat diukur menggunakan alat ukur yang tersedia, kemudian kalian akan mendapatkan hasil seperti tabel berikut ini.</p>
+                        <img class="img-fluid mb-4" src="assets/img/portfolio/table_fiilled.png" />
+                        <p class="lead" style="text-align: justify;">
+                            Data menggunakan perhitungan menggunakan rumus untuk mencari posisi sumbu-x yaitu
+                            $$x= v_0 \; cos \theta .t$$ dan posisi sumbu-y yaitu 
+                            $$y= v_0 \; sin \theta .t -  \frac{1}{2} gt^2$$
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <span class="col-5 col-lg-3 offset-1 text-center border border-success h5 rounded-3 p-2 bg-info text-white mt-3">Verification</span>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <p class="lead" style="text-align: justify;">Jadi, apa itu <u>gerak parabola</u>?<br>Gerak parabola merupakan gerak suatu objek di udara yang hanya dipengaruhi oleh gaya gravitasi. Dalam arti lain, pada gerak parabola ini gaya penyebab benda bergerak dan gaya gesekan udara diabaikan sehingga gerak benda ditinjau setelah benda diberi kecepatan awal dan bergerak bebas di udara hanya dengan pengaruh gaya gravitasi. Gerak parabola dapat dianalisis sebagai dua gerakan terpisah jika hambatan udara diabaikan. Pada gerak parabola, komponen gerak horizontal memiliki kecepatan tetap sedangkan komponen gerak vertikalnya memiliki percepatan tetap. Namun tetap harus memperhatikan bagaimana posisi benda saat akan bergerak, saat di udara, dan saat kembali ke tanah yang merupakan akibat gravitasi bumi.</p>
+                    </div>
+                </div>
+
                 <div class="row">
                     <div class="col-lg-4 ms-auto "><img class="img-fluid" src="assets/img/portfolio/materi_3.png" alt="..." /></div>
                     <div class="col-lg-4 me-auto ">
@@ -98,12 +236,18 @@
                         </a>
                     </div>
                 </div>
-                <div class="fw-bold h3 mt-4">Untuk lebih jelasnya, perhatikan beberapa gambar berikut!</div>
+
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <p class="h3 mt-4">Untuk lebih jelasnya, perhatikan beberapa gambar berikut!</p>
+                    </div>
+                </div>
+
                 <div class="card-group">
                     <div class="card">
                         <img class="card-img-top" src="assets/img/portfolio/materi_4.jpg" alt="Card image cap">
                         <div class="card-body">
-                        <p class="card-text">Permainan bola basket termasuk salah satu penerapan gerak parabola karena bola basket yang dilempar ke udara dengan sudut elevasi terhadap sumbu-x dan memiliki kecepatan lempar, pada sudut maksimumnya bola hanya memiliki kecepatan dalam arah sumbu-x dan pada arah sumbu y terdapat percepatan gravitasi yang menyebabkan benda bergerak melengkung di sepanjang jalur lintasannya yang berbentuk parabola.</p>
+                        <p class="card-text" style="text-align: justify;">Permainan bola basket termasuk salah satu penerapan gerak parabola karena bola basket yang dilempar ke udara dengan sudut elevasi terhadap sumbu-x dan memiliki kecepatan lempar, pada sudut maksimumnya bola hanya memiliki kecepatan dalam arah sumbu-x dan pada arah sumbu y terdapat percepatan gravitasi yang menyebabkan benda bergerak melengkung di sepanjang jalur lintasannya yang berbentuk parabola.</p>
                     </div>
                         <div class="card-footer">
                             <small>Sumber gambar: <a href="https://www.sinotif.com/berita-acara/berita-artikel/detail/gerak-parabola" target="_blank" class="link-underline-light">sinotif.com</a></small>
@@ -112,7 +256,7 @@
                     <div class="card">
                         <img class="card-img-top" src="assets/img/portfolio/materi_5.jpeg" alt="Card image cap">
                         <div class="card-body">
-                            <p class="card-text">Pada penembakan peluru, sebuah peluru terdorong ke depan dengan laju konstan sampai lintasannya diubah oleh gaya tarik gravitasi bumi sehingga lintasan tersebut berbentuk parabola.</p>
+                            <p class="card-text" style="text-align: justify;">Pada penembakan peluru, sebuah peluru terdorong ke depan dengan laju konstan sampai lintasannya diubah oleh gaya tarik gravitasi bumi sehingga lintasan tersebut berbentuk parabola.</p>
                         </div>
                         <div class="card-footer">
                             <small>Sumber gambar: <a href="https://sharingrpp.com/pdf/16345/gerak-parabola.pdf" target="_blank" class="link-underline-light">sharingrpp.com</a></small>
@@ -122,7 +266,7 @@
                         <img class="card-img-top" src="assets/img/portfolio/materi_6.png" alt="Card image cap">
                         <img class="card-img-top" src="assets/img/portfolio/bds_orig.gif" alt="Card image cap">
                         <div class="card-body">
-                            <p class="card-text">Bom yang dijatuhkan dari pesawat pada ketinggian tertentu memberikan kecepatan awal benda yang hanya ada pada arah sumbu-x sehingga gaya gravitasi bumi menyebabkan bom jatuh hanya seperempat lingkaran yang jika digambarkan lintasannya berbentuk parabola.</p>
+                            <p class="card-text" style="text-align: justify;">Bom yang dijatuhkan dari pesawat pada ketinggian tertentu memberikan kecepatan awal benda yang hanya ada pada arah sumbu-x sehingga gaya gravitasi bumi menyebabkan bom jatuh hanya seperempat lingkaran yang jika digambarkan lintasannya berbentuk parabola.</p>
                         </div>
                         <div class="card-footer">
                             <small>Sumber gambar: 
@@ -131,19 +275,204 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 me-auto" data-bs-target="#portfolioModal1" data-bs-toggle="modal">
+
+                <div class="row mt-5">
+                    <div class="col-lg-4 ms-auto "><img class="img-fluid" src="assets/img/portfolio/materi_8.png" alt="..." /></div>
+                    <div class="embed-responsive embed-responsive-16by9 me-auto col-lg-4">
+                        <div class="card  text-white bg-success" style="width: 25rem;">
+                            <!-- <iframe class="embed-responsive-item card-img-top"  style="width: 100%;height: 100vh;" src="https://www.youtube.com/embed/pHQQnD7vgTc?si=o252eOeN8OsvVoSU" title="YouTube video player" allowfullscreen></iframe> -->
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/sP_4pJ5yGWY?si=gd4W6zfGS7RAyuJg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <div class="card-body">
+                                <p class="card-text" style="text-align: justify;">Dari penjelasan video tersebut, dianalisis bahwa benda mulanya berada pada titik pusat koordinat (titik 0) kemudian dilempar dengan kecepatan awal (V<sub>0</sub>) dan membentuk sudut elevasi (θ). Pada komponen arah sumbu-x benda bergerak dengan kecepatan tetap (percepatannya nol) sehingga nilai kecepatan benda pada sumbu-x (V<sub>x</sub>) di tiap titiknya sama besar (V<sub>x</sub>=V<sub>0x</sub>). Dan pada komponen arah sumbu-y benda mengalami percepatan tetap yang berupa percepatan gravitasi (g=10 m⁄s<sup>2</sup> ). </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 offset-md-3 mt-4 text-center">
+                        <div class="card border-0" style="width: 100%;">
+                            <!-- <iframe class="embed-responsive-item card-img-top"  style="width: 100%;height: 100vh;" src="https://www.youtube.com/embed/pHQQnD7vgTc?si=o252eOeN8OsvVoSU" title="YouTube video player" allowfullscreen></iframe> -->
+                            <img class="img-fluid" src="assets/img/portfolio/materi_9.png">
+                            <div class="card-body">
+                                <small class="card-text">Sumber gambar : Giancolli</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <p class="lead" style="text-align: justify;">
+                            Pada gambar di atas, gerak parabola memiliki beberapa titik keadaan seperti:<br>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <ol class="list-group list-group-numbered border-0">
+                            <li class="list-group-item lead border-0" style="text-align: justify;">
+                                Titik A merupakan titik awal benda bergerak dan memiliki kecepatan awal (V<sub>0</sub>).
+                            </li>
+                            <li class="list-group-item lead border-0" style="text-align: justify;">
+                                Titik B dan D merupakan posisi kecepatan benda pada waktu tertentu.
+                            </li>
+                            <li class="list-group-item lead border-0" style="text-align: justify;">
+                                Titik C merupakan titik tertinggi yang dicapai benda (h<sub>max</sub>) dan pada posisi ini kecepatan benda pada sumbu-x tetap (V<sub>x</sub>=V<sub>0x</sub>). sedangkan kecepatan benda pada sumbu-y adalah nol (V<sub>y</sub>=0).
+                            </li>
+                            <li class="list-group-item lead border-0" style="text-align: justify;">
+                                Titik E merupakan posisi akhir lintasan benda dengan kecepatan yang masih sama besar dengan kecepatan awal benda (V=V<sub>0</sub>).
+                            </li>
+                        </ol>
+                        <p class="lead mt-4" style="text-align: justify;">Pada sumbu-x dan sumbu-y gerak parabola berlaku:</p>
+                        <table class="table table-bordered table-responsive">
+                            <tr class="text-center">
+                                <th class="bg-success text-white">Besaran</th>
+                                <th class="bg-success text-white">Sumbu-X</th>
+                                <th class="bg-success text-white">Sumbu-Y</th>
+                            </tr>
+                            <tr>
+                                <td>Kecepatan Awal <strong>(Titik A)</strong></th>
+                                <td>$$v_{0x}= v_0 \; cos \theta $$</td>
+                                <td>$$v_{0y}= v_0 \; sin \theta $$</td>
+                            </tr>
+                            <tr>
+                                <td>Kecepatan Benda pada Waktu Tertentu <strong>(Titik B dan D)</strong></td>
+                                <td>$$v_x=v_{0x}$$<br>$$v_x=v_0 \; cos \theta $$</td>
+                                <td>$$v_y=v_{0y}-gt $$ <br> $$v_y=v_0 \; sin \theta -gt$$</td>
+                            </tr>
+                            <tr>
+                                <td>Posisi Benda <strong>(Titik B dan D)</strong></td>
+                                <td>$$x=v_{0x}.t$$<b>$$x=v_0 \; cos \theta .t $$</b></td>
+                                <td>$$y=v_{0y}.t- \frac{1}{2} gt^2 $$ <br> $$y=v_0 \; sin \theta .t- \frac{1}{2}gt^2 $$</td>
+                            </tr>
+                        </table>
+                        <p class="lead" style="text-align: justify;">Pada gerak parabola, benda memiliki kecepatan pada komponen sumbu-x dan sumbu-y sehingga besar kecepatan benda di setiap waktu (t) detik dirumuskan dengan: $$v= \sqrt {{v_x}^2 + {{v_y}^2}} $$ <br>
+                        Dan arah kecepatan benda (sudut elevasi) terhadap sumbu horizontal (sumbu-x) dapat dirumuskan dengan:
+                        $$Tan \; \theta =  \frac{v_y}{v_x}$$
+                        </p>
+                        <p class="h4 text-start"><u>CONTOH SOAL!</u></p>
+                        <ol class="list-group list-group-numbered border-0">
+                            <li class="list-group-item lead border-0" style="text-align: justify;">
+                                Seorang anak sedang melakukan tengangan bola. Jika diketahui anak tersebut menendang bola dengan kecepatan awal 15 m/s dan sudut elevasinya 53°. Berapakah kecepatan awal bola pada sumbu x dan sumbu y serta resultan kecepatan bola saat 1 detik di udara?<br>
+                                <u>Diketahui</u>:
+                                $$v_0=15 \; m/s$$
+                                $$\theta=53°$$
+                                $$t=1s$$
+                                <u>Ditanya</u>:
+                                Besar v<sub>0x</sub> , v<sub>0y</sub>, dan v saat 1s?<br>
+                                <u>Jawab</u>:<br>
+                                Kecepatan awal pada sumbu-x $$v_{0x}=v_0 \; cos53^\circ = (15)(0.6)= \underline{9 \; m/s}$$
+                                Kecepatan awal pada sumbu-y $$v_{0y}=v_0 \; sin53^\circ = (15)(0.8)= \underline{12 \; m/s}$$
+                                Setelah mengetahui kecepatan awal pada sumbu x dan sumbu y, kemudian kita akan menghitung resultan kecepatan pada saat 1s. Sebelum itu kita harus menghitung besar kecepatan pada saat 1s pada sumbu x dan sumbu y.<br>
+                                Pada sumbu x bola mengalami GLB maka besar kecepatannya tetap $$v_x=v_{0x}=9 \; m/s$$
+                                Pada sumbu y kecepatan bola saat 1s yaitu $$v_y=v_{0y}-gt=12-(10)(1)=2 \; m/s$$
+                                Maka besar resultan kecepatan bola pada saat 1s di udara yaitu
+                                $$v=\sqrt {{v_x}^2+{v_y}^2}= \sqrt{9^2+2^2}$$
+                                $$v=\sqrt {81+4}= \sqrt {85} = \underline {9,22 \; m/s}$$
+                            </li>
+                            <li class="list-group-item lead border-0" style="text-align: justify;">
+                                Seorang anak menendang bola hingga mencetak gol. Jika anak tersebut menendang bola dengan kecepatan 10 m/s dengan sudut elevasi 53°. Tentukan posisi bola setelah ditendang selama 1 detik?<br>
+                                <u>Diketahui</u>:
+                                $$v_0=15 \; m/s$$
+                                $$\theta = 53^\circ$$
+                                $$t=1 \; s$$
+                                $$g=10 \; m/s^2$$
+                                <u>Ditanya</u>:<br>
+                                Posisi bola (x dan y) setelah 1 detik?<br>
+                                <u>Jawab</u>:<br>
+                                Posisi bola pada sumbu x setelah 1 detik yaitu
+                                $$x=v_0 \; cos53^\circ .t=(10)(0.6)(1)=\underline{6 \; m}$$
+                                Posisi bola pada sumbu y setelah 1 detik yaitu
+                                $$y=v_0 \; sin \theta .t - \frac{1}{2} gt^2$$
+                                $$y=\left((10)(0.8)(1)-\frac{1}{2} (10)(1)^2 \right)$$
+                                $$y=8-5=\underline{3 \; m}$$
+                                Jadi posisi bola setelah 1 detik dalam (x,y) yaitu (6,3) meter
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <span class="col-5 col-lg-3 offset-1 text-center border border-success h5 rounded-3 p-2 bg-info text-white mt-3">Generalization</span>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <p class="lead">
+                            Dapat kita simpulkan bahwa pengertian dan ciri dari gerak parabola adalah sebagai berikut.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <ol class="list-group list-group-numbered border-0">
+                            <li class="list-group-item lead border-0">
+                                Gerak parabola merupakan perpaduan dari gerak lurus beraturan (GLB) dan gerak lurus berubah beraturan (GLBB).
+                            </li>
+                            <li class="list-group-item lead border-0">
+                                Lintasan gerak parabola berbentuk lengkungan seperti parabola.
+                            </li>
+                            <li class="list-group-item lead border-0" style="text-align: justify;">
+                                Pada arah sumbu-x mengalami GLB dan pada arah sumbu-y mengalami GLBB.
+                            </li>
+                            <li class="list-group-item lead border-0" style="text-align: justify;">
+                                Kecepatan benda pada gerak parabola dipengaruhi oleh besar kecepatan awal, sudut yang terbentuk, dan gaya gravitasi bumi.
+                            </li>
+                            <li class="list-group-item lead border-0" style="text-align: justify;">
+                                Posisi benda pada gerak parabola dipengaruhi oleh kecepatan awal, sudut elevasi, dan waktu.
+                            </li>
+                            <li class="list-group-item lead border-0" style="text-align: justify;">
+                                Posisi benda dapat ditinjau dari sumbu x dan sumbu y.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-6 offset-md-3">
+                        <p class="text-uppercase" style="text-align: justify;">
+                            <strong>Sebelum melanjutkan ke kegiatan pembelajaran berikutnya, kerjakanlah Asesmen Formatif 1 berikut!</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 offset-md-3" data-bs-target="#portfolioModal1" data-bs-toggle="modal">
                     <a class="btn btn-xl btn-success mt-4">
                         <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
                             <path d="M10.804 8 5 4.633v6.734zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696z"/>
                           </svg>
-                        Kerjakan Kuis
+                        ASESMEN FORMATIF 1
                     </a>
+                </div>
                 </div>
             </div>
         </section>
+        <div class="row mb-4">
+            <div class="col-5 col-lg-3 text-center me-auto">
+                <a class="btn btn-xl btn-success" href="home.html#daftarIsi">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                        <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+                    </svg>
+                    Kembali ke home
+                </a>
+            </div>
+            <div class="col-5 col-lg-3 text-center ms-auto">
+                <a class="btn btn-xl btn-success" href="materi_2.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+                        <path d="M10.804 8 5 4.633v6.734zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696z"/>
+                      </svg>
+                    Materi 2
+                </a>
+            </div>
+        </div>
+
+
+
         <!-- Copyright Section-->
         <div class="copyright py-4 text-center text-white">
-            <div class="container"><small>Copyright &copy; Your Website 2023</small></div>
+            <div class="container"><small>Copyright &copy; Irsya Affiyani Darlestia 2024</small></div>
         </div>
         <!-- Portfolio Modals-->
         <!-- Portfolio Modal 1-->
@@ -156,14 +485,15 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Kuis 1</h2>
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Asesmen Formatif 1</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
                                         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                                         <div class="divider-custom-line"></div>
                                     </div>
-                                    <a data-quiz="QI3V9RRHJ" data-type=4 href="https://take.quiz-maker.com/QI3V9RRHJ">Loading...</a><script>(function(i,s,o,g,r,a,m){var ql=document.querySelectorAll('A[quiz],DIV[quiz],A[data-quiz],DIV[data-quiz]'); if(ql){if(ql.length){for(var k=0;k<ql.length;k++){ql[k].id='quiz-embed-'+k;ql[k].href="javascript:var i=document.getElementById('quiz-embed-"+k+"');try{qz.startQuiz(i)}catch(e){i.start=1;i.style.cursor='wait';i.style.opacity='0.5'};void(0);"}}};i['QP']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://take.quiz-maker.com/3012/CDN/quiz-embed-v1.js','qp');</script>
+                                    <!-- <a data-quiz="QI3V9RRHJ" data-type=4 href="https://take.quiz-maker.com/QI3V9RRHJ">Loading...</a><script>(function(i,s,o,g,r,a,m){var ql=document.querySelectorAll('A[quiz],DIV[quiz],A[data-quiz],DIV[data-quiz]'); if(ql){if(ql.length){for(var k=0;k<ql.length;k++){ql[k].id='quiz-embed-'+k;ql[k].href="javascript:var i=document.getElementById('quiz-embed-"+k+"');try{qz.startQuiz(i)}catch(e){i.start=1;i.style.cursor='wait';i.style.opacity='0.5'};void(0);"}}};i['QP']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://take.quiz-maker.com/3012/CDN/quiz-embed-v1.js','qp');</script> -->
+                                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSevkvki9LijusRMPOqw7ZnOAlpFtpmUfeVpKJfKU5yCU4ZYDg/viewform?embedded=true" width="100%" height="1000" frameborder="0" marginheight="0" marginwidth="0">Memuat…</iframe>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
